@@ -5,21 +5,23 @@
 #' @param path The path where to save the new pdf.
 #' @param modelnames The names of the models
 #' @param title The title of the table
+#' @param digits The number of digits to show
 #' @return Nothing - but create a pdf doc with the table in the right path
 #' @examples
 #' LatexFromModels(models, "./output/modeleffect1")
 #' @export
 
-LatexFromModels <- function(models, path, modelnames = NULL, title = NULL) {
+LatexFromModels <- function(models, path, modelnames = NULL, title = NULL, digits = 2) {
   save(models, file = paste0(path, ".rdata"))
 
-  if (length(models) != length(modelnames)) stop("The length of modelnames does not match the number of models in models")
+  if (length(models) != length(modelnames) & !is.null(modelnames)) stop("The length of modelnames does not match the number of models in models")
 
   latex_code <- texreg::texreg(models,
                                format = "latex",
                                custom.model.names = modelnames,
                                caption = title,
-                               caption.above = TRUE)
+                               caption.above = TRUE,
+                               digits = digits)
 
   path2 <- paste0(path, ".tex")
 

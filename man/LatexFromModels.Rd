@@ -4,7 +4,7 @@
 \alias{LatexFromModels}
 \title{LatexFromModels}
 \usage{
-LatexFromModels(models, path, modelnames = NULL, title = NULL)
+LatexFromModels(models, path, modelnames = NULL, title = NULL, digits = 2)
 }
 \arguments{
 \item{models}{A model or a list of modelt}
@@ -14,6 +14,8 @@ LatexFromModels(models, path, modelnames = NULL, title = NULL)
 \item{modelnames}{The names of the models}
 
 \item{title}{The title of the table}
+
+\item{digits}{The number of digits to show}
 }
 \value{
 Nothing - but create a pdf doc with the table in the right path

@@ -1,0 +1,89 @@
+Changes in the package
+
+
+
+1. Update Version Number
+Edit DESCRIPTION File:
+
+Open your package directory and find the DESCRIPTION file.
+Update the Version field from 1.0 to 1.1.
+plaintext
+Copier le code
+Version: 1.1
+Edit NEWS.md or NEWS File:
+
+It's good practice to maintain a NEWS.md or NEWS file that records changes in each version.
+Add a section for version 1.1 detailing the changes.
+markdown
+Copier le code
+# MyPackage 1.1
+
+* Added new features.
+* Improved performance.
+* Fixed bugs in the previous version.
+
+
+2. Update Package Documentation
+Regenerate Documentation:
+
+Use roxygen2 to update the documentation. Run the following command in R:
+
+r
+Copier le code
+library(devtools)
+document()
+Update Vignettes:
+
+If you have vignettes, update them to reflect the new version where necessary.
+3. Test the New Version
+Run Tests:
+
+Ensure all your tests pass with the new version. Run:
+
+r
+
+library(devtools)
+test()
+Check the Package:
+
+Run R CMD check to check for any issues:
+
+r
+
+devtools::check()
+
+4. Build and Install the New Version
+Build the Package:
+
+Create a new package tarball:
+
+r
+devtools::build()
+Install the Package:
+
+Install the new version locally:
+
+r
+Copier le code
+install.packages("/Users/leohenry/Library/CloudStorage/OneDrive-Personnel/Documents/Cours/Projets/R-Packages/mytools_0.1.4.tar.gz", repos = NULL, type = "source")
+5. Share the New Version
+Git Repository:
+
+Commit your changes and push them to your Git repository.
+
+bash
+Copier le code
+git add .
+git commit -m "Updated package to version 1.1"
+git push
+Update CRAN (if applicable):
+
+If your package is on CRAN, follow the submission guidelines to submit the new version.
+6. Communicate the Update
+Release Notes:
+
+Prepare release notes and share them with your users or community to inform them about the new version.
+Update Website or Blog (if applicable):
+
+Update any documentation, blog posts, or websites to reflect the changes in the new version.
+By following these steps, you'll ensure that your package is updated to version 1.1 and that users are aware of the changes and improvements.

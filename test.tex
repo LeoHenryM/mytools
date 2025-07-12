@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[landscape, margin=1cm]{geometry}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\begin{document}
+\small
+\begin{table}[!h]
+\centering
+\begin{tabular}{llllrrrrrr}
+\toprule
+City & Location & ChargeLevel & Rate & 2018 & 2019 & 2020 & 2021 & 2022 & 2023\\
+\midrule
+\midrule
+\cellcolor{gray!6}{Los Angeles} & \cellcolor{gray!6}{LASD} & \cellcolor{gray!6}{FELONY} & \cellcolor{gray!6}{CrimeRate} & \cellcolor{gray!6}{672.0350524} & \cellcolor{gray!6}{724.6538777} & \cellcolor{gray!6}{684.1645301} & \cellcolor{gray!6}{647.4715872} & \cellcolor{gray!6}{679.3268737} & \cellcolor{gray!6}{NA}\\
+Los Angeles & LAPD & FELONY & CrimeRate & 862.0646348 & 844.9402883 & 794.5588952 & 848.3355593 & 794.5083483 & 773.7279613\\
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Bronx} & \cellcolor{gray!6}{FELONY} & \cellcolor{gray!6}{CrimeRate} & \cellcolor{gray!6}{1205.8246028} & \cellcolor{gray!6}{1239.5228623} & \cellcolor{gray!6}{942.6130496} & \cellcolor{gray!6}{1046.7781395} & \cellcolor{gray!6}{1323.9176499} & \cellcolor{gray!6}{1607.4740725}\\
+New-York City & Brooklyn & FELONY & CrimeRate & 1050.2433377 & 1019.9605219 & 737.8109634 & 794.1924276 & 953.4158888 & 1139.6499722\\
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Manhattan} & \cellcolor{gray!6}{FELONY} & \cellcolor{gray!6}{CrimeRate} & \cellcolor{gray!6}{1247.9884276} & \cellcolor{gray!6}{1169.8857866} & \cellcolor{gray!6}{870.7799517} & \cellcolor{gray!6}{1065.9957986} & \cellcolor{gray!6}{1282.1855541} & \cellcolor{gray!6}{1376.8184439}\\
+\addlinespace
+New-York City & Queens & FELONY & CrimeRate & 802.8852441 & 758.3441370 & 584.7967904 & 648.8170071 & 802.0423443 & 948.8072974\\
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Staten Island} & \cellcolor{gray!6}{FELONY} & \cellcolor{gray!6}{CrimeRate} & \cellcolor{gray!6}{740.2678405} & \cellcolor{gray!6}{745.3643128} & \cellcolor{gray!6}{580.8757819} & \cellcolor{gray!6}{624.0540415} & \cellcolor{gray!6}{677.9171195} & \cellcolor{gray!6}{868.9857282}\\
+Los Angeles & LASD & MISDEMEANOR & CrimeRate & 1825.4121597 & 2161.4975233 & 1657.8567872 & 1232.8492631 & 1203.5591043 & NA\\
+\cellcolor{gray!6}{Los Angeles} & \cellcolor{gray!6}{LAPD} & \cellcolor{gray!6}{MISDEMEANOR} & \cellcolor{gray!6}{CrimeRate} & \cellcolor{gray!6}{1398.8455568} & \cellcolor{gray!6}{1235.8880560} & \cellcolor{gray!6}{779.3233091} & \cellcolor{gray!6}{743.6191794} & \cellcolor{gray!6}{684.2064780} & \cellcolor{gray!6}{761.4440492}\\
+New-York City & Bronx & MISDEMEANOR & CrimeRate & 2622.8029260 & 2165.3397565 & 1268.7258196 & 1312.0714789 & 1831.2240195 & 2276.3395740\\
+\addlinespace
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Brooklyn} & \cellcolor{gray!6}{MISDEMEANOR} & \cellcolor{gray!6}{CrimeRate} & \cellcolor{gray!6}{1511.0944197} & \cellcolor{gray!6}{1196.1390725} & \cellcolor{gray!6}{650.0770477} & \cellcolor{gray!6}{763.2922114} & \cellcolor{gray!6}{982.8806838} & \cellcolor{gray!6}{1255.2196703}\\
+New-York City & Manhattan & MISDEMEANOR & CrimeRate & 2502.6693052 & 2030.5690530 & 1063.1802875 & 1400.2680515 & 1596.6330165 & 1859.9005541\\
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Queens} & \cellcolor{gray!6}{MISDEMEANOR} & \cellcolor{gray!6}{CrimeRate} & \cellcolor{gray!6}{1344.6364176} & \cellcolor{gray!6}{1188.7173016} & \cellcolor{gray!6}{656.4207925} & \cellcolor{gray!6}{756.1159086} & \cellcolor{gray!6}{890.5193548} & \cellcolor{gray!6}{1155.0504485}\\
+New-York City & Staten Island & MISDEMEANOR & CrimeRate & 1428.0344156 & 1137.4734061 & 665.5910457 & 832.3422085 & 1016.3668852 & 1167.5467253\\
+\cellcolor{gray!6}{Los Angeles} & \cellcolor{gray!6}{LASD} & \cellcolor{gray!6}{FELONY} & \cellcolor{gray!6}{DeclinationRate} & \cellcolor{gray!6}{0.2630699} & \cellcolor{gray!6}{0.2533409} & \cellcolor{gray!6}{0.2940041} & \cellcolor{gray!6}{0.3284672} & \cellcolor{gray!6}{0.3510897} & \cellcolor{gray!6}{0.3856455}\\
+\addlinespace
+Los Angeles & LAPD & FELONY & DeclinationRate & 0.4040647 & 0.4049707 & 0.4075578 & 0.3964017 & 0.3865281 & 0.4172244\\
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Bronx} & \cellcolor{gray!6}{FELONY} & \cellcolor{gray!6}{DeclinationRate} & \cellcolor{gray!6}{0.1752330} & \cellcolor{gray!6}{0.1786121} & \cellcolor{gray!6}{0.2931680} & \cellcolor{gray!6}{0.2414116} & \cellcolor{gray!6}{0.2673274} & \cellcolor{gray!6}{NA}\\
+New-York City & Brooklyn & FELONY & DeclinationRate & 0.0688672 & 0.0821911 & 0.1788913 & 0.0716223 & 0.0739292 & NA\\
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Manhattan} & \cellcolor{gray!6}{FELONY} & \cellcolor{gray!6}{DeclinationRate} & \cellcolor{gray!6}{0.0368619} & \cellcolor{gray!6}{0.0464765} & \cellcolor{gray!6}{0.1251845} & \cellcolor{gray!6}{0.0648686} & \cellcolor{gray!6}{0.0691184} & \cellcolor{gray!6}{NA}\\
+New-York City & Queens & FELONY & DeclinationRate & 0.0524331 & 0.0500635 & 0.0991471 & 0.0554416 & 0.0545957 & NA\\
+\addlinespace
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Staten Island} & \cellcolor{gray!6}{FELONY} & \cellcolor{gray!6}{DeclinationRate} & \cellcolor{gray!6}{0.0491568} & \cellcolor{gray!6}{0.0477490} & \cellcolor{gray!6}{0.0824742} & \cellcolor{gray!6}{0.0278510} & \cellcolor{gray!6}{0.0513940} & \cellcolor{gray!6}{NA}\\
+Los Angeles & LASD & MISDEMEANOR & DeclinationRate & 0.1468875 & 0.1342489 & 0.2304934 & 0.5453858 & 0.5123186 & 0.5126282\\
+\cellcolor{gray!6}{Los Angeles} & \cellcolor{gray!6}{LAPD} & \cellcolor{gray!6}{MISDEMEANOR} & \cellcolor{gray!6}{DeclinationRate} & \cellcolor{gray!6}{0.2332885} & \cellcolor{gray!6}{0.1980694} & \cellcolor{gray!6}{0.2203486} & \cellcolor{gray!6}{0.2830114} & \cellcolor{gray!6}{0.3335998} & \cellcolor{gray!6}{0.3728609}\\
+New-York City & Bronx & MISDEMEANOR & DeclinationRate & 0.1935505 & 0.2357759 & 0.3737113 & 0.2995905 & 0.3494933 & NA\\
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Brooklyn} & \cellcolor{gray!6}{MISDEMEANOR} & \cellcolor{gray!6}{DeclinationRate} & \cellcolor{gray!6}{0.0894568} & \cellcolor{gray!6}{0.1143214} & \cellcolor{gray!6}{0.2092692} & \cellcolor{gray!6}{0.1220284} & \cellcolor{gray!6}{0.1493989} & \cellcolor{gray!6}{NA}\\
+\addlinespace
+New-York City & Manhattan & MISDEMEANOR & DeclinationRate & 0.0578494 & 0.0758146 & 0.1205921 & 0.0562462 & 0.0940555 & NA\\
+\cellcolor{gray!6}{New-York City} & \cellcolor{gray!6}{Queens} & \cellcolor{gray!6}{MISDEMEANOR} & \cellcolor{gray!6}{DeclinationRate} & \cellcolor{gray!6}{0.0274341} & \cellcolor{gray!6}{0.0344504} & \cellcolor{gray!6}{0.0796932} & \cellcolor{gray!6}{0.0470601} & \cellcolor{gray!6}{0.0414089} & \cellcolor{gray!6}{NA}\\
+New-York City & Staten Island & MISDEMEANOR & DeclinationRate & 0.1039012 & 0.0781250 & 0.1142098 & 0.0827766 & 0.0938712 & NA\\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{document}

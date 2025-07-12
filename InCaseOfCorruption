@@ -1,0 +1,36 @@
+In case of corruption:
+
+Here’s a step-by-step guide to resolve this:
+
+Restart R Session: Before proceeding with any changes, it's a good idea to restart your R session to clear any existing processes and release locked files.
+
+
+Remove the problematic package:
+If the package mytools is the one causing the issue, you should first try to remove it. You can do this from R with the following command:
+
+remove.packages("mytools")
+
+After removing the package, you should also manually check the library location (/Users/leohenry/Library/R/x86_64/4.2/library/) and make sure there are no remaining files from mytools. If there are, delete them manually.
+
+
+Reinstall the package:
+If you have the package source or script used to create it, you can reinstall it. If you’re using devtools to install it directly from source, you can run:
+
+devtools::install_local("/Users/leohenry/Library/CloudStorage/OneDrive-Personnel/Documents/Cours/Projets/R-Packages/mytools_xxx.tar.gz")
+install.packages("/Users/leohenry/Library/CloudStorage/OneDrive-Personnel/Documents/Cours/Projets/R-Packages/mytools_xxx.tar.gz", repos = NULL, type = "source")
+
+
+Make sure you replace "/path/to/your/package" with the actual path where your package source files are located.
+Test the installation:
+
+After reinstalling, load the package using library(mytools) and check if the issue persists.
+
+
+Optional - Building the package:
+If you’re developing your own package and want to make sure it’s set up correctly, consider using devtools::check() to validate everything. Although you mentioned not needing something fancy, this can help catch issues early.
+For a simpler check, use:
+R
+Copy code
+devtools::load_all("/path/to/your/package")
+This loads all functions without actually installing the package, useful for quick testing during development.
+These steps should help fix the corrupt database issue and get your package running smoothly. If the problem continues, you may need to investigate further into possible issues with your R installation or even filesystem errors that could be affecting file integrity.

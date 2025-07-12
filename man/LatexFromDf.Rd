@@ -4,12 +4,26 @@
 \alias{LatexFromDf}
 \title{LatexFromDf}
 \usage{
-LatexFromDf(df, path)
+LatexFromDf(
+  df,
+  path,
+  title = NULL,
+  subtitle = NULL,
+  endnotes = NULL,
+  Width = NULL,
+  Height = NULL
+)
 }
 \arguments{
 \item{df}{A DataFrame.}
 
 \item{path}{The path where to save the new pdf.}
+
+\item{title}{a character title}
+
+\item{subtitle}{a character subtitle - not working yet}
+
+\item{endnotes}{a character endnotes}
 }
 \value{
 Nothing - but create a pdf doc with the table in the righ path
